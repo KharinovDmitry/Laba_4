@@ -17,7 +17,10 @@ public class HorizontalLayout implements IComponent  {
 
 
             for (int i = 0; i < child.GetHeight(); i++) {
-                res[i][sumWidth] = ' ';
+                if(sumWidth != 0)
+                {
+                    res[i][sumWidth + c - 1] = ' ';
+                }
                 for (int j = 0; j < child.GetWidth(); j++) {
                     res[i][sumWidth + j + c] = childUI[i][j];
                 }
